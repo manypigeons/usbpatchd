@@ -53,3 +53,9 @@ log "Re-locking UserConfigurationProfiles..."
 log "chflags uchg exited with code $?"
 
 log "usbpatchd finished."
+
+log "Restarting lockdownd..."
+/bin/launchctl stop com.apple.lockdownd
+sleep 2
+/bin/launchctl start com.apple.lockdownd
+log "lockdownd restart exited with code $?"
