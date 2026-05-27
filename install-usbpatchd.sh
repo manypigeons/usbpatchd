@@ -231,7 +231,7 @@ echo 'Extracting install archive on device...'
 SshCmd 'cd /mnt1 && tar -xvzf usbpatchd-install.tar.gz && rm usbpatchd-install.tar.gz'
 
 echo 'Fixing LaunchDaemon plist ownership...'
-SshCmd 'chown root:wheel /mnt1/Library/LaunchDaemons/com.apple.usbpatchd.plist'
+SshCmd '/usr/sbin/chown root:wheel /mnt1/Library/LaunchDaemons/com.apple.usbpatchd.plist'
 
 echo ''
 echo 'Finished installing usbpatchd.'
